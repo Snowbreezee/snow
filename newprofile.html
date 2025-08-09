@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Snowbreeze Hofer - Profile</title>
+  <style>
+    :root{
+      --sidebar-w: 250px;
+      --topbar-h: 56px;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      font-family: sans-serif;
+      color: white;
+      background-image: url('https://img.freepik.com/premium-photo/abstract-yellow-background-web-design-templates-product-studio-with-smooth-gradient-color_570543-9097.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: margin-right 0.3s ease;
+    }
+
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: var(--topbar-h);
+      background: rgba(0,0,0,0.5);
+      padding: 8px 20px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      z-index: 1001;
+    }
+
+    .menu-btn {
+      background: white;
+      color: black;
+      border: none;
+      padding: 8px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: calc(-1 * var(--sidebar-w));
+      width: var(--sidebar-w);
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      padding: calc(var(--topbar-h) + 14px) 20px 20px 20px;
+      box-shadow: -3px 0 5px rgba(0,0,0,0.5);
+      transition: right 0.3s ease;
+      z-index: 1000;
+    }
+
+    .sidebar h2 {
+      font-size: 18px;
+      margin: 0 0 10px 0;
+      color: #cfcfcf;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+      padding-bottom: 8px;
+    }
+
+    .sidebar ul { list-style: none; padding: 10px 0 0 0; margin: 0; }
+    .sidebar li { margin: 10px 0; }
+    .sidebar a { color: white; text-decoration: none; font-size: 16px; }
+    .sidebar a.active { text-decoration: underline; text-underline-offset: 4px; }
+
+    body.sidebar-open { margin-right: var(--sidebar-w); }
+    body.sidebar-open .sidebar { right: 0; }
+
+    .profile-header {
+      text-align: center;
+      padding: 80px 20px 20px;
+    }
+
+    .circle-image {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid white;
+    }
+
+    h1 { margin: 20px 0 10px; }
+    h2 { margin: 10px 0 20px; }
+    h2 u { text-decoration: none; border-bottom: 2px solid white; }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 20px;
+      justify-content: center;
+    }
+
+    .left-column, .right-column {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 20px;
+      border-radius: 15px;
+      min-width: 300px;
+      flex: 1;
+    }
+
+    @media (max-width: 768px) {
+      .container { flex-direction: column; gap: 20px; }
+      /* on small screens, make the topbar smaller and ensure padding adjusts */
+      :root { --topbar-h: 48px; --sidebar-w: 220px; }
+      .sidebar { padding: calc(var(--topbar-h) + 12px) 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <button class="menu-btn" onclick="toggleSidebar()">☰ Menu</button>
+  </div>
+
+  <div class="sidebar" aria-hidden="true">
+    <h2>worddd</h2>
+    <ul>
+      <li><a href="introduction.html" class="active">Introduction</a></li>
+      <li><a href="https://discord.gg/kgHUWAwd" target="_blank">Join our discord!</a></li>
+      <li><a href="https://www.roblox.com/users/7483179773/profile" target="_blank">Add me on ROBLOX too!</a></li>
+      <li><a href="https://web.facebook.com/profile.php?id=61578372636163" target="_blank">This is my Facebook</a></li>
+    </ul>
+  </div>
+
+  <div class="profile-header">
+    <img src="https://tse4.mm.bing.net/th/id/OIP.bh2cK0RqDTk0Ap_xjWKUWQHaFi?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Circular Image" class="circle-image">
+    <h1>Snowbreeze Hofer</h1>
+    <h2><u>MAWD101</u></h2>
+  </div>
+
+  <div class="container">
+    <div class="left-column">
+      <h2>A. Personal Information</h2>
+      <ul>
+        <li><b>NAME:</b> Snowbreeze Hofer</li>
+        <li><b>NICKNAME:</b> J.Em</li>
+        <li><b>BIRTHDAY:</b> November 28, 2008</li>
+        <li><b>AGE:</b> 16</li>
+        <li><b>ADDRESS:</b> 594 Carnation Street Buhangin Orange Grove, Davao City</li>
+        <li><b>GENDER:</b> Male</li>
+      </ul>
+      <h2>B. Contact Information</h2>
+      <ul>
+        <li><b>PHONE NUMBER:</b> 09429851963</li>
+        <li><b>EMAIL:</b> snowbreeze2929@roblox.com</li>
+      </ul>
+    </div>
+
+    <div class="right-column">
+      <h2>C. Skills</h2>
+      <ul>
+        <li>I can do programming</li>
+        <li>I can cook, I guess</li>
+        <li>Building Desktop computers and upgrading including laptops</li>
+        <li>Using complicated operating Systems like Gentoo/Arch Linux</li>
+      </ul>
+      <h2>D. Interests</h2>
+      <ul>
+        <li>I love anime frfr</li>
+        <li>Playing Roblox and watching YouTube</li>
+        <li>I'm also into Cyberpunk 2077/Edgerunners (obviously)</li>
+        <li>Finding ways to automate tasks is one of my hobbies</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.body.classList.toggle('sidebar-open');
+      const aria = document.querySelector('.sidebar').getAttribute('aria-hidden') === 'true';
+      document.querySelector('.sidebar').setAttribute('aria-hidden', String(!aria));
+    }
+    document.addEventListener('click', function(e){
+      const sidebar = document.querySelector('.sidebar');
+      const btn = document.querySelector('.menu-btn');
+      if(document.body.classList.contains('sidebar-open') && !sidebar.contains(e.target) && !btn.contains(e.target)){
+        document.body.classList.remove('sidebar-open');
+        sidebar.setAttribute('aria-hidden','true');
+      }
+    });
+  </script>
+</body>
+</html>
